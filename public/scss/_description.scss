@@ -1,0 +1,19 @@
+.description {
+    &__header{
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: #232323;
+        margin-bottom: 2.5rem;
+    }
+
+    &__text{
+        white-space: pre-wrap;
+        margin: 8px auto;
+        color: rgba(35, 35, 35, 0.7);
+        font-size: 0.875rem;
+    }
+
+    &__button{
+        margin-bottom: 2.5rem;
+    }
+}

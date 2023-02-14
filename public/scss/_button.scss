@@ -1,0 +1,21 @@
+.button {
+    &--main {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 21px 132px;
+        background: #659dbd;
+        outline: none;
+        border: none;
+        color: #ffffff;
+        font-family: "Ubuntu";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 22px;
+    }
+
+    &--slider{
+        
+    }
+}
