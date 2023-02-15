@@ -2,8 +2,9 @@
     &--main {
         display: flex;
         flex-direction: row;
-        align-items: flex-start;
-        padding: 21px 132px;
+        justify-content: center;
+        align-items: center;
+        padding: 1.3125rem 4rem;
         background: #659dbd;
         outline: none;
         border: none;
@@ -12,7 +13,16 @@
         font-style: normal;
         font-weight: 400;
         font-size: 1rem;
-        line-height: 22px;
+        line-height: 1.375rem;
+        transition: background-color 0.3s ease-in-out;
+
+        &:hover{
+            background: #5B8DAA;
+        }
+
+        @include breakpoint-up(large) {
+            padding: 1.3125rem 8.875rem;
+        }
     }
 
     &--slider{

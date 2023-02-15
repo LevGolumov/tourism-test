@@ -1,0 +1,75 @@
+.modal {
+    position: fixed;
+    top: 10rem;
+    width: 100%;
+    height: calc(100vh - 12rem);
+    overflow-y: scroll;
+    background-color: #ffffff;
+    z-index: 30;
+    animation: slide-down 300ms ease-out forwards;
+
+    scrollbar-width: thin;
+    scrollbar-color: rgba(51,51,51,0.8) white;
+    &::-webkit-scrollbar{
+        width: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: rgba(51,51,51,0.8);
+        opacity: 0.6;
+        border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background: rgba(51,51,51,1);
+    }
+
+    @media (min-width: 74rem){
+        top: 5%;
+        height: calc(100vh - 10%);
+        // bottom: 11rem;
+        width: 74rem;
+        left: calc(50% - 37rem);
+    }
+
+    &__content {
+        padding: 2.5rem 1.25rem;
+        @include breakpoint-up(large){
+            padding: 4rem 2.5rem;
+        }
+    }
+
+    &__backdrop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 20;
+        background-color: rgba(35, 35, 35, 0.4);
+    }    
+}
+
+@media (min-height: 1412px) and (max-width: 73.9rem){
+    .modal{
+        height: fit-content;
+    }
+}
+
+@media (min-height: 925px) and (min-width: 74rem){
+    .modal{
+        height: fit-content;
+    }
+}
+
+
+@keyframes slide-down {
+    from {
+        opacity: 0;
+        transform: translateY(-3rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

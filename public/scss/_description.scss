@@ -1,19 +1,46 @@
 .description {
-    &__header{
-        font-size: 1.5rem;
-        font-weight: 500;
-        color: #232323;
+    &__head {
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
         margin-bottom: 2.5rem;
+
+        @include breakpoint-up(large) {
+            flex-direction: row;
+            gap: 0;
+            justify-content: space-between;
+        }
     }
 
-    &__text{
+    &__textblock {
+        @include breakpoint-up(large) {
+            width: 36.625rem;
+            margin-top: 4rem;
+        }
+    }
+
+    &__text {
         white-space: pre-wrap;
-        margin: 8px auto;
+        margin: 0.5rem auto;
         color: rgba(35, 35, 35, 0.7);
         font-size: 0.875rem;
+        line-height: 1.375rem;
+
+        @include breakpoint-up(large) {
+            font-size: 1.125rem;
+            line-height: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
     }
 
-    &__button{
-        margin-bottom: 2.5rem;
+    &__button {
+        width: 100%;
+
+        @include breakpoint-up(large) {
+            width: fit-content;
+        }
+    }
+
+    @include breakpoint-up(large) {
     }
 }

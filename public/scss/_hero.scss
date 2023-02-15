@@ -1,7 +1,15 @@
 .hero {
-    background-image: url("./images/Banner-sm.png");
+    background: linear-gradient(0deg, rgba(35, 35, 35, 0.2), rgba(35, 35, 35, 0.2)), url("./images/Banner-sm.png");    
     height: 10rem;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center 50%;
+
+    @include breakpoint-up(medium) {
+        background: linear-gradient(0deg, rgba(35, 35, 35, 0.2), rgba(35, 35, 35, 0.2)), url("./images/Banner-lg.png");
+        height: 30rem;
+        background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 50%;
+    }
 }

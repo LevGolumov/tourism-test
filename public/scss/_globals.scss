@@ -15,6 +15,69 @@ body {
     font-weight: 400;
 }
 
+h1 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #232323;
+
+    @include breakpoint-up(large) {
+        font-size: 2.5rem;
+    }
+}
+
+button {
+    cursor: pointer;
+}
+
+input, textarea {
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid #eaeaea;
+    padding: 1.3125rem 1.5rem;
+    transition: border 0.2s ease-in-out;
+    color: #232323;
+    font-size: 0.875rem;
+    @include breakpoint-up(large){
+        font-size: 1rem;
+    }
+
+
+    &::placeholder {
+        font-family: "Ubuntu";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 0.875rem;
+        line-height: 1.375rem;
+        color: rgba(35, 35, 35, 0.4);
+
+        @include breakpoint-up(large){
+            font-size: 1rem;
+        }
+    }
+
+    &:hover{
+        border: 1px solid #659DBD;
+    }
+
+    &:focus{
+        border: 1px solid #659DBD;
+        outline: none;
+    }
+}
+
+label {
+    font-family: "Ubuntu";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    color: rgba(35, 35, 35, 0.7);
+}
+
 .container {
     padding: 2.5rem 1.25rem;
+
+    @include breakpoint-up(medium){
+        padding: 4rem 8rem;
+    }
 }
